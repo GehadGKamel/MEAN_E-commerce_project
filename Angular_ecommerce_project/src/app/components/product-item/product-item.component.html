@@ -1,0 +1,46 @@
+<!-- <div class="card all m-3">
+  <img
+    class="card-img-top"
+    [src]="productItem.image_url"
+    alt="Card image cap"
+  />
+  <div class="card-body">
+    <div
+      class="card-header"
+      [routerLink]="['/pDetails', productItem._id]"
+      routerLinkActive="bg-dark"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <h5 class="card-title">{{ productItem.name }}</h5>
+      <p class="card-text">${{ productItem.price }}</p>
+    </div>
+    <p class="card-text">
+      {{ productItem.description }}
+    </p>
+    <div>
+      <a class="btn btn-primary" (click)="counter()">+</a>
+    </div>
+  </div>
+</div> -->
+
+<div class="box card m-3">
+  <div class="icons">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-share"></a>
+    <a href="#" class="fas fa-eye" [routerLink]="['/pDetails', productItem._id]" routerLinkActive="bg-dark"
+      [routerLinkActiveOptions]="{ exact: true }"></a>
+  </div>
+  <img [src]="productItem.image_url" alt="" />
+  <div class="content">
+    <h3 class="card-title">{{ productItem.name }}</h3>
+    <div class="price">{{ productItem.price | currency }}</div>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+    </div>
+    <a class="card-btn" (click)="counter()">add to cart</a>
+  </div>
+</div>

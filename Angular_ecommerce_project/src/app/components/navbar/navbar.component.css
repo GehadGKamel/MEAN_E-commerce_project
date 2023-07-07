@@ -1,0 +1,183 @@
+/* header/nav */
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #463bbe;
+  padding: 1rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: #f4c300;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #463bbe;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: #463bbe;
+  cursor: pointer;
+  background: whitesmoke;
+  padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+  background: #f4c300;
+  color: whitesmoke;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: whitesmoke;
+  padding: 1rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  color: #463bbe;
+}
+
+header .navbar a {
+  font-size: 1.2rem;
+  color: #463bbe;
+  margin: 0 1rem;
+}
+
+header .navbar a:hover {
+  color: #f4c300;
+}
+
+header .icons a {
+  font-size: 1.5rem;
+  color: #463bbe;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+  color: #f4c300;
+}
+
+.icons {
+  position: relative;
+}
+
+.icons p {
+  position: absolute;
+  background-color: #f4c300;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  color: #463bbe;
+  right: -8px;
+  top: -10px;
+}
+
+#menu-bar {
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 0.1rem solid #463bbe;
+  color: #463bbe;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+
+/*end header/nav */
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: -120%;
+    width: 100%;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+
+  header .navbar.active {
+    left: 0;
+  }
+
+  header .navbar a {
+    font-size: 1rem;
+    background: #fff;
+    border: 0.1rem solid var(--blue);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .home .slide-container .slide .image .text {
+    width: 60%;
+  }
+
+  .home #prev,
+  .home #next {
+    top: 85%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .slide-container .slide .image {
+    padding-bottom: 6rem;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .up {
+    bottom: 20px;
+  }
+
+  .up.show {
+    right: 10px;
+  }
+}

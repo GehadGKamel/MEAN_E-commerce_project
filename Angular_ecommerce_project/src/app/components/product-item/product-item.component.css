@@ -1,0 +1,121 @@
+.service {
+  margin-top: 10em;
+}
+
+.box {
+  text-align: center;
+  flex: 1 1 30rem;
+}
+
+.box i {
+  font-size: 1rem;
+  color: #f4c300;
+}
+
+.box h3 {
+  font-size: 1rem;
+  color: #463bbe;
+  padding-top: 1rem;
+}
+
+.box p {
+  font-size: 1rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.box {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+  flex: 1 1 30rem;
+  cursor: pointer;
+}
+
+.box .content {
+  padding: 1.5rem;
+}
+
+.box img {
+  object-fit: cover;
+  height: 400px;
+  /* height: 10rem; */
+  /* transform: rotate(-35deg); */
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.1));
+}
+
+.box .icons {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  top: 0.5rem;
+  left: -10rem;
+  z-index: 10;
+}
+
+.box:hover .icons {
+  left: 1rem;
+}
+
+.box .icons a {
+  height: 4.5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 1.5rem;
+  color: #463bbe;
+  border: 0.1rem solid #463bbe;
+  border-radius: 0.5rem;
+  background: #fff;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+.box .icons a:hover {
+  background: #f4c300;
+  color: #fff;
+}
+.box .content h3 {
+  color: #463bbe;
+  font-size: 1.5rem;
+}
+.box .content .price {
+  color: #463bbe;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 1rem 0;
+}
+.box .content .price span {
+  color: #f4c300;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+.box .content .stars {
+  padding-bottom: 1rem;
+}
+.box .content .stars i {
+  font-size: 1rem;
+  color: #f4c300;
+}
+
+.card-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #463bbe;
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #463bbe;
+  cursor: pointer;
+  background: whitesmoke;
+  padding: 0.5rem 1rem;
+}
+
+.card-btn:hover {
+  background: #f4c300;
+  color: whitesmoke;
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,127 @@
+  <div class="container bg-light p-3 rounded-5 test">
+    <form class="m-3" [formGroup]="productForm" (submit)="submit($event)">
+      <div class="form-group">
+        <label for="pid">Product Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pid"
+          aria-describedby="productHelp"
+          placeholder="Enter Product ID"
+          formControlName="product_id"
+        />
+        <ng-container
+          *ngIf="getPId.touched || btnClicked"
+          id="productHelp"
+          class="form-text"
+        >
+          <p *ngIf="getPId.hasError('required')" class="text-danger">
+            Product Id is required
+          </p>
+
+          <p *ngIf="getPId.hasError('pattern')" class="text-danger">
+            Product Id must be numbers or chars only
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="form-group">
+        <label for="pName">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pName"
+          aria-describedby="nameHelp"
+          placeholder="Enter Product name"
+          formControlName="name"
+        />
+        <ng-container
+          *ngIf="getPName.touched || btnClicked"
+          id="nameHelp"
+          class="form-text"
+        >
+          <p *ngIf="getPName.hasError('required')" class="text-danger">
+            Product Name is required
+          </p>
+          <p *ngIf="getPName.hasError('pattern')" class="text-danger">
+            Enter a valid Product Name
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="form-group">
+        <label for="pPrice">Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pPrice"
+          placeholder="Enter Product Price"
+          formControlName="price"
+        />
+        <ng-container
+          *ngIf="getPPrice.touched || btnClicked"
+          id="priceHelp"
+          class="form-text"
+        >
+          <p *ngIf="getPPrice.hasError('required')" class="text-danger">
+            Product price is required
+          </p>
+          <p *ngIf="getPPrice.hasError('pattern')" class="text-danger">
+            Enter a valid price
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="form-group">
+        <label for="pImg">Image Url</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pImg"
+          placeholder="Enter Image URL"
+          formControlName="image_url"
+        />
+        <ng-container
+          *ngIf="getPImgUrl.touched || btnClicked"
+          id="imgHelp"
+          class="form-text"
+        >
+          <p *ngIf="getPImgUrl.hasError('required')" class="text-danger">
+            Product Image Url is required
+          </p>
+          <p *ngIf="getPImgUrl.hasError('pattern')" class="text-danger">
+            Enter a valid URL
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="form-group">
+        <label for="pDesc">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="pDesc"
+          placeholder="Enter Product Description"
+          formControlName="description"
+        />
+        <ng-container
+          *ngIf="getPDesc.touched || btnClicked"
+          id="descHelp"
+          class="form-text"
+        >
+          <p *ngIf="getPDesc.hasError('required')" class="text-danger">
+            Description is required
+          </p>
+          <p *ngIf="getPDesc.hasError('pattern')" class="text-danger">
+            Enter a valid Description
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="d-flex justify-content-center m-2">
+        <button type="submit" class="btn btn-success">
+          {{ productId ? "Edit product" : "Add new product" }}
+        </button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,53 @@
+<div class="test">
+  <div class="container bg-light p-3 rounded-3">
+    <form [formGroup]="loginForm" (submit)="login($event)">
+      <div class="form-group">
+        <label for="username">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          aria-describedby="nameHelp"
+          placeholder="Enter Name"
+          formControlName="name"
+        />
+        <ng-container *ngIf="getName.touched" id="nameHelp" class="form-text">
+          <p *ngIf="getName.hasError('required')" class="text-danger">
+            Name is required
+          </p>
+          <p *ngIf="getName.hasError('minlength')" class="text-danger">
+            Name must be 3 chars at least
+          </p>
+          <p *ngIf="getName.hasError('pattern')" class="text-danger">
+            Name must be chars only
+          </p>
+        </ng-container>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Enter Password"
+          formControlName="password"
+        />
+        <ng-container
+          *ngIf="getPassword.touched"
+          id="passwordHelp"
+          class="form-text"
+        >
+          <p *ngIf="getPassword.hasError('required')" class="text-danger">
+            Password is required
+          </p>
+          <p *ngIf="getPassword.hasError('minlength')" class="text-danger">
+            Password must be 8 chars at least
+          </p></ng-container
+        >
+      </div>
+      <div class="d-flex justify-content-center m-2">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

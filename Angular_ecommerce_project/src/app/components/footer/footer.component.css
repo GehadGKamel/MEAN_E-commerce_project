@@ -1,0 +1,78 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+/* footer style */
+.footer .box-container {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: whitesmoke;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1.5rem; */
+}
+
+.footer .box-container .box {
+  flex: 1 1 20rem;
+}
+
+.footer .box-container .box h3 {
+  color: #463bbe;
+  font-size: 1rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer .box-container .box a {
+  color: #666;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.footer .box-container .box a:hover {
+  color: #f4c300;
+}
+
+.footer .box-container .credit {
+  text-align: center;
+  width: 100%;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  /* padding: 1rem; */
+  padding-top: 1rem;
+  color: #999;
+}
+
+.footer .box-container .credit span {
+  color: #f4c300;
+}
+
+section.footer {
+  padding: 5px;
+}
+
+/* end footer style */
